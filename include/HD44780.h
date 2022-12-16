@@ -39,17 +39,17 @@
 /******** Comandos para LCD *******/
 
 #define LCD_CLEAR       0X01    //Limpia pantalla
-#define LCD_CURSOR_ON   0X0F    //Cursor ON
-#define LCD_CURSOR_OFF  0X0C    //Cursor off
 #define LCD_HOME		0X02    //Primera l�nea
+#define LCD_CURSOR_OFF  0X0C    //Cursor off 0b0000_1100(12)
+#define LCD_CURSOR_ON   0X0F    //Cursor ON (15)
+#define LCD_LEFT        0X10    //Mueve cursor izquierda(16)
+#define LCD_RIGHT       0X14    //Mueve cursor derecha(20)
+#define ROT_LEFT        0X18    //Rotar izquierda(24)
+#define ROT_RIGHT       0X1C    //Rotar derecha(28)
 #define LCD_LINEA2      0XC0    //Segunda l�nea
 #define LCD_LINEA3      0x94    //Tercera l�nea
 #define LCD_LINEA4      0XD4    //Cuarta l�nea
-#define LCD_LEFT        0X10    //Mueve cursor izquierda
-#define LCD_RIGHT       0X14    //Mueve cursor derecha
 
-#define ROT_LEFT        0X18    //Rotar izquierda
-#define ROT_RIGHT       0X1C    //Rotar derecha
 
 /************ Prototipos de funciones *************/
 

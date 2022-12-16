@@ -1,5 +1,5 @@
 {
-    "name": "LCD_HD44780",
+    "name": "HD44780_liquidC",
     "version": "1.0.0",
     "description": "A library for controlling HD44780 liquid cristal by of AVR microcontrollers",
     "keywords": "liquid cristal,HD44780",
