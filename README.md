@@ -1,5 +1,7 @@
 # LCD-avrgcc
-HD44780_liquidC is a library that allow us to control a lcd to display information. It's written in *C* (for future portability any uC) and is intend for use with the entire **AVR family** of microcontrollers with *7 pins*.
+HD44780_liquidC is a library that allow us to control a lcd for 4-bits to display information. It's written in *C* for the uC *ATmega328P* (Arduino UNO).
+
+> To modify the ports and dirs to be connected to the LCD, just modify the `#define` ones in the header *HD44480.h*
 
 ## Table of content
 
@@ -17,7 +19,9 @@ HD44780_liquidC is a library that allow us to control a lcd to display informati
 
 ## Demo
 
-You can see on the channel of youtube of [carlosQL][youtube]
+<img src="https://i.imgur.com/5Lg9aQR.jpg" width="300" align="center">
+
+You can see on the channel of youtube by [carlosQL][youtube]
 
 ## Feature
 
