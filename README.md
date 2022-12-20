@@ -78,8 +78,8 @@ Technologies used in the project:
 
 ## Author
 
-- [Carlos QL][carlosQL] made main library,
-- [Martin GH][martingh] documentation in GitHub and registry in PlatformIO
+- [Carlos QL][carlosQL] library creator,
+- [Martin GH][martingh] documentation.
 
 
 [youtube]: https://www.youtube.com/watch?v=fgXfFPAbIKo&list=PL5a8rjiFubvetVKc8T-bHUXx6KZXm6XkA&index=10
