@@ -1,8 +1,11 @@
 # LCD-avrgcc
 
-HD44780_liquidC is a library that allow us to control a lcd for 4-bits to display information. It's written in *C* for the uC *ATmega328P* (Arduino UNO).
+HD44780_liquidC es una *static library* que te permite controlar un display LCD con el **controlador HD44780** a 4-bits, se integro la función `printf("")` para una mayor facilidad de uso.
 
-> To modify the ports and dirs to be connected to the LCD, just modify the `#define` ones in the header *HD44480.h*
+Esta escrita en *C* para el **uC** *ATmega328P* (Arduino UNO) pero puedes ver el código principal en la carpeta **src/** de este repositorio y extenderlo a otros uC.
+
+> Esta library ocupa **6 GPIO** (RS,EN,D4..D7), solo modifica el header *src/HD44480.h* en el `#define`,
+en su configuración actual ocupa el DDRB,PORT.
 
 ## Table of content
 
@@ -22,15 +25,16 @@ HD44780_liquidC is a library that allow us to control a lcd for 4-bits to displa
 
 <img src="https://i.imgur.com/5Lg9aQR.jpg" width="300" align="center">
 
-You can see on the channel of youtube by [carlosQL][youtube]
+Puedes ver su funcionamiento en el canal de [carlosQL][youtube] o tambien programarla online en [Wookwi][wookwi].
 
 ## Feature
 
+A parte de la función printf() cuenta con las siguientes funciones y comandos:
+
 ### Functions
 
--  `lcd_init()` Inicializa las salidas y configura el lcd a 4-bits, limpia la pantalla.
+- `lcd_init()` Inicializa las salidas y configura el lcd a 4-bits, limpia la pantalla.
 - `lcd_cmd(uint8_t dato)` envia instrucciones de control, puedes ver las instrucciones de control en la parte de abajo.
-- `lcd_printf(char *dato)` envia un array de caracteres (string), como si usaramos el printf de *C*.
 - `lcd_goto(uint8_t x, uint8_t y)` mueve el cursor a una posición (x,y).
 - `lcd_cursor(unsigned char cursor)` Activa o desactiva el cursor.
 - `lcd_clean()` Limpia toda la pantalla lcd.
@@ -49,41 +53,46 @@ You can see on the channel of youtube by [carlosQL][youtube]
 
 ## Installation Step
 
-1. clone the repository.
-2. add the repository to your project.
-3. In the main.c write: `#include "lcd.h"`
+Existen varias formas para usar la libreria, aquí usaremos 2 y esto dependera del *IDE* o *Editor de texto* que ocupes:
 
-If you´re using **platforIO**:
-1. only change the directory to project where *platformio.ini* is located.
-2. copy the following comand of cli shell and press enter.
+- **Microchip Studio**
+  1. Clona este repositorio.
+  2. Abre microchip studio ve a la parte de: File>Open>Project/solution.. y busca tu repositorio descargado y selecciona el archivo **.cproj**.
+  3. Oprime el boton de **Build** y te generara una static library **.a**
+  4. En tu projecto principal das click derecho en **Libraries** y selecciones **Add Library**, buscas la static library generada.
+  5. Opcionalmente agrega el header **HD44780.h** al proyecto principal para no tener warnigns del compilador.
+- **PlatformIO (VScode)**
+  1. only change the directory to project where *platformio.ini* is located.
+  2. copy the following comand of cli shell and press enter.
+
     ```shell
     pio pkg install --library "marti-beta/HD44780_liquidC@^1.0.0"
     ```
-3. In the main.c write: `#include <lcd.h>`
+
+  3. In the main.c write: `#include <lcd.h>`
 
 ## The process
 
 ### Built with
+
 Technologies used in the project:
 
 - C lenguage
 - platformIO library
 - Atmega328p (*uC of Arduino*)
 - LCD 16x2 or 20x4
-### Structure
 
 ## Useful resources
 
 - [video][youtube] on youtube Carlos QL
-
 
 ## Author
 
 - [Carlos QL][carlosQL] library creator,
 - [Martin GH][martingh] documentation.
 
-
 [youtube]: https://www.youtube.com/watch?v=fgXfFPAbIKo&list=PL5a8rjiFubvetVKc8T-bHUXx6KZXm6XkA&index=10
 
 [carlosQL]: https://www.youtube.com/@CarlosQL
 [martinGh]: https://github.com/micro-marti
+[wookwi]: https://wokwi.com/projects/370099311707629569
