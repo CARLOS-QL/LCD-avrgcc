@@ -1,0 +1,27 @@
+{
+  "name": "HD44780_liquidC",
+  "version": "2.0.0",
+  "description": "A library for controlling HD44780 liquid cristal by of AVR microcontrollers",
+  "keywords": "liquid cristal,HD44780",
+  "repository":
+  {
+      "type": "git",
+      "url": "https://github.com/CARLOS-QL/LCD-avrgcc"
+  },
+  "authors":
+  [
+      {
+          "name": "Carlos QL",
+          "email": "carlos359_7@hotmail.com",
+          "maintaner": true
+      },
+      {
+          "name": "Martin GH",
+          "email": "martigh14@gmail.com"
+      }
+  ],
+  "license": "MIT",
+  "homepage": "https://www.youtube.com/watch?v=fgXfFPAbIKo&list=PL5a8rjiFubvetVKc8T-bHUXx6KZXm6XkA&index=10",
+  "framework": "arduino",
+  "platforms": "atmelavr"
+}
